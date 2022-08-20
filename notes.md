@@ -187,3 +187,10 @@ public class DemoApplication {
   - then Data Access Layer will reach out to the Database.
 - We first create a StudentController class,
 - We then Create a StudentService class,
+  - If we create a student Service, We should make use of dependency injection to avoid direction invoking a class or object
+
+# Dependency Injection
+- We have to add the annotation __@Autowired__ on top of the method(constructor) you want to instantiate the service from
+- The Service class should also have the annotation __@Component__ to tell spring that this class can be instantiated without using the _new_ keyword.
+  - To be more specific, you can use the __@Service__ annotation instead, which is more specific.
+- 
