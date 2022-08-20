@@ -181,5 +181,9 @@ public class DemoApplication {
 
 ## API Layer
 - Now we can structure our API Properly using Models, Route and Controllers, Business Logics, etc
-- We first create a StudentController
-- 
+- The structure should be like: *From the client to the Api Layer.*
+  - The API Layer should talk to the __Service Layer__ => Hold the Business Logic of our API, 
+  - and the service layer should talk to the Data Access Layer, 
+  - then Data Access Layer will reach out to the Database.
+- We first create a StudentController class,
+- We then Create a StudentService class,
