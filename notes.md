@@ -1,6 +1,11 @@
+
 # Learning Spring Boot
 - The quickest way to start a project is to go to *spring initializer* website and start a new project, the download and unzip the folder.
 - Open it with IntelliJ and wait for dependencies to download, then run the app
+
+# IntelliJ Shortcuts
+- Shortcut to create constructor(__ctrl + n__, shows all shortcuts, __ctrl + shift + a__ shows actions tab where you find constructor)
+- To Clean-up unused imports (__ctrl + shift + o__)
 
 # Making a Simple API with Spring Boot
 - Go to the main Java File(DemoApplication.java):
@@ -47,7 +52,6 @@ public List<String> hello(){
 # Student CRUD
 - Create a student package in the main project package(com.example.demo)
 - Then we create a class for our model(Student.java)
-  - Shortcut to create constructor(__ctrl + n__, shows all shortcuts, __ctrl + shift + a__ shows actions tab where you find constructor)
 - We can use the shortcuts to generate constructors, getters and setters, toString methods, etc...
 - Then we need to use it in our main Java file(DemoApplication.java)
 
@@ -175,3 +179,7 @@ public class DemoApplication {
 
 ```
 
+## API Layer
+- Now we can structure our API Properly using Models, Route and Controllers, Business Logics, etc
+- We first create a StudentController
+- 
