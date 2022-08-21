@@ -184,7 +184,7 @@ public class DemoApplication {
                         LocalDate.of(2020, Month.MARCH, 22),
                         13
                 )
-                      );
+        );
     }
 }
 
@@ -248,10 +248,21 @@ public class DemoApplication {
 
 - To allow error message to be sent along with request, we can set it up in _application.properties_ file.
 
-# Updating the Database(@DeleteMapping(path="studentId}))
+# Deleting from the Database(@DeleteMapping(path="studentId}))
 
 - To delete we use the _@DeleteMapping_ annotation, which will accept a dynamic variable in its path called __
   studentId__,
 - You can access the __studentId__ from the delete method by mapping the studentId(Long) with an annotation called __
   PathVariable("studentId)
 - Then call your delete method created in the services, and pass in the ID as a parameter
+
+# Updating the Database(@PutMapping(path = "{studentId}"))
+
+- To update we use the __@PutMapping__ annotation, accept the ID of the row we want to update, just like how we do when
+  deleting
+- We also make use of the __@RequestParams__ annotation to set the other fields to not be required: __@RequestParam(
+  required = false) String name,__
+- Then we call our _studentServices.updateStudent(StudentId)_
+    - In the studentServices.updateStudent(), We add the annotation __@Transactional__
+    - If we use the above annotation, we do not need to interact directly with the database, we can just use the setter
+      methods of the class(student.setName(), etc)
