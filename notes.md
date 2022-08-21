@@ -266,3 +266,19 @@ public class DemoApplication {
     - In the studentServices.updateStudent(), We add the annotation __@Transactional__
     - If we use the above annotation, we do not need to interact directly with the database, we can just use the setter
       methods of the class(student.setName(), etc)
+
+# Packaging and Running App
+
+- You can build your application into a __.jar__ file which you can execute anytime you want
+- First, if you have the folder __target__, delete it.
+- Or with help ov IntelliJ and maven:
+    - Open up maven tab on right of IntelliJ,
+    - Inside Lifecycle, click on clean, which will clean the project thereby also deleting the __target__ folder
+    - Another Option will be to click on install, which will perform series of other tasks including cleaning the
+      project, and generating a __jar__ file that we can execute anytime
+    - To run the __jar__ file, we navigate to the newly generated __target__ folder, and run the command __java -jar
+      nameOfFile.jar__
+    - That will run __one instance__ of the app,
+    - you can run as many instances of the app as you like, but you will have to specify different port numbers for
+      them:
+        - __java -jar nameOfFile.jar --server.port=8081__
