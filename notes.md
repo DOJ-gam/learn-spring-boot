@@ -211,3 +211,6 @@ public class DemoApplication {
 # Adding Data to Database
 - We can start by creating a __StudentConfig.java_ class
 - Annotate it with __@Configuration__
+
+# Adding Virtual Columns(@Transient)
+- To add a virtual column(Column that will not be stored in the database), we use the _@Transient_ annotation on top of the column
