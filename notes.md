@@ -193,4 +193,20 @@ public class DemoApplication {
 - We have to add the annotation __@Autowired__ on top of the method(constructor) you want to instantiate the service from
 - The Service class should also have the annotation __@Component__ to tell spring that this class can be instantiated without using the _new_ keyword.
   - To be more specific, you can use the __@Service__ annotation instead, which is more specific.
+
+# Connecting to Database
+- The database connection should be created in the _src/main/resources/application.properties_
+- Then you add the database dependencies in the __pom.xml__=> It's where the applications dependencies are saved
+  - After that you will need to __reload the project__=> right-click on the pom.xml, click maven, then click reload project
+
+# Accessing Database
+- By convention and following the convention of _spring-data-jpa_, we create a Repository file as an interface
+- the interface will extend the JpaRepository, which is generic, and takes in two arguments: 
+  - The Type(Model) that we want the repository to work upon,
+  - The type(data type) of the id of the Model we want to work on(eg: Long)
+- Then we also add the annotation __@Repository__ to the Interface.
+- Then we can use it in our _ServiceFile.java_ by adding __@Autowired__ to the constructor
+- By setting that up we can have access to lots of methods provided by spring-data-jpa, like: __findAll()__, etc
+
+# Adding Data to Database
 - 
