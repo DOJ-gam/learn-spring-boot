@@ -209,4 +209,5 @@ public class DemoApplication {
 - By setting that up we can have access to lots of methods provided by spring-data-jpa, like: __findAll()__, etc
 
 # Adding Data to Database
-- 
+- We can start by creating a __StudentConfig.java_ class
+- Annotate it with __@Configuration__
