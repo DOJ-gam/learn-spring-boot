@@ -214,3 +214,12 @@ public class DemoApplication {
 
 # Adding Virtual Columns(@Transient)
 - To add a virtual column(Column that will not be stored in the database), we use the _@Transient_ annotation on top of the column
+
+# POST Request (@PostMapping)
+- We will create a void method to create our new post, 
+- The method will in the Student as a Parameter,
+- But inorder for us to access the data the user is sending, we will have to map the request body to the student parameter using _@RequestBody_ annotation.
+
+# Sending Errors Along with response
+- To allow error message to be sent along with request, we can set it up in _application.properties_ file.
+- 
